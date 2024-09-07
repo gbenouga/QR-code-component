@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* Correction du nom de la variable */
+    --White: hsl(0, 0%, 100%);
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+
+    /* Font */
+    --outfit: 'Outfit', system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--outfit), sans-serif; /* Remplacement d'Open Sans par Outfit */
+    font-size: 15px;
+    min-height: 100vh;
+    background-color: var(--Slate-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--White);
+}
+
+.card-img {
+    border-radius: 10px;
+    background-image: url(../images/image-qr-code.png);
+    background-size: cover;
+    background-position: center;
+    height: 18rem;
+}
+
+.card-text {
+    padding: 0 0.5rem;
+}
+
+.card-text h1,
+.card-text p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card-text h1 {
+    color: var(--Slate-900);
+}
+
+.card-text p {
+    color: var(--Slate-500);
+    padding-bottom: 1rem;
+}
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--Slate-900);
+}
+
+@media (min-width: 375px) {
+    .card-text h1 {
+        font-weight: 700;
+        font-size: 1.3em;
+    }
+
+    .card-text p {
+        font-size: 15px;
+    }
+}
